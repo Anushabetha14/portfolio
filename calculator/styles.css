@@ -46,6 +46,13 @@ body {
     color: #000;
 }
 
+.calculator form {
+    /* Added for responsive wrapping */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .calculator form input {
     border: 0;
     outline: 0;
@@ -99,3 +106,52 @@ body {
     transform: scale(0.95);
 }
 
+/* Responsive styles for screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .calculator .display input {
+        width: 100%;
+        height: 50px;
+        font-size: 28px;
+    }
+
+    .calculator form input {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        margin: 8px 6px;
+    }
+
+    .calculator form input.equalOperator {
+        width: 110px;
+        height: 50px;
+        font-size: 18px;
+        margin: 8px 6px;
+    }
+}
+
+/* For very small devices like phones under 400px */
+@media (max-width: 400px) {
+    .calculator .display input {
+        height: 45px;
+        font-size: 24px;
+    }
+
+    .calculator form input {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+        margin: 6px 4px;
+    }
+
+    .calculator form input.equalOperator {
+        width: 100px;
+        height: 45px;
+        font-size: 16px;
+        margin: 6px 4px;
+    }
+}
